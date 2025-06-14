@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>辛全丰 - 个人简历</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#165DFF',
+            secondary: '#36CBCB',
+            accent: '#722ED1',
+            neutral: '#F5F7FA',
+            dark: '#1D2129'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .card-hover {
+        @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+      }
+      .section-padding {
+        @apply py-12 md:py-16;
+      }
+      .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -25px;
+        top: 10px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: theme('colors.primary');
+      }
+      .timeline-item::after {
+        content: '';
+        position: absolute;
+        left: -25px;
+        top: 22px;
+        height: calc(100% - 22px);
+        width: 2px;
+        background-color: theme('colors.primary/20');
+      }
+    }
+  </style>
+</head>
+<body class="bg-neutral text-dark font-sans">
+  <!-- 导航栏 -->
+  <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50 transition-all duration-300" id="navbar">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-primary">辛全丰</a>
+      <div class="hidden md:flex space-x-8">
+        <a href="#about" class="font-medium hover:text-primary transition-colors">关于我</a>
+        <a href="#education" class="font-medium hover:text-primary transition-colors">教育背景</a>
+        <a href="#experience" class="font-medium hover:text-primary transition-colors">实践经历</a>
+        <a href="#skills" class="font-medium hover:text-primary transition-colors">个人技能</a>
+        <a href="#awards" class="font-medium hover:text-primary transition-colors">获奖经历</a>
+      </div>
+      <button class="md:hidden text-dark" id="menu-toggle">
+        <i class="fa fa-bars text-2xl"></i>
+      </button>
+    </div>
+    <!-- 移动端菜单 -->
+    <div class="md:hidden hidden bg-white shadow-lg absolute w-full" id="mobile-menu">
+      <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+        <a href="#about" class="font-medium py-2 hover:text-primary transition-colors">关于我</a>
+        <a href="#education" class="font-medium py-2 hover:text-primary transition-colors">教育背景</a>
+        <a href="#experience" class="font-medium py-2 hover:text-primary transition-colors">实践经历</a>
+        <a href="#skills" class="font-medium py-2 hover:text-primary transition-colors">个人技能</a>
+        <a href="#awards" class="font-medium py-2 hover:text-primary transition-colors">获奖经历</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 英雄区域 -->
+  <header class="pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-br from-primary/5 to-secondary/5">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-dark leading-tight text-shadow">
+          辛全丰 <span class="text-primary">个人简历</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 mt-4 max-w-lg">
+          北京科技大学生物技术专业本科生，辅修英语，具有跨学科背景和丰富的科研、志愿服务经历
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="tel:18769358575" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition-all flex items-center">
+            <i class="fa fa-phone mr-2"></i> 18769358575
+          </a>
+          <a href="mailto:1984735439@qq.com" class="bg-white hover:bg-gray-50 text-primary border border-primary px-6 py-3 rounded-lg font-medium transition-all flex items-center">
+            <i class="fa fa-envelope mr-2"></i> 1984735439@qq.com
+          </a>
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+          <!-- 这里可以替换为您的照片 -->
+          <img src="https://picsum.photos/800/800?random=1" alt="辛全丰" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 关于我 -->
+    <section id="about" class="section-padding bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">
+          <span class="inline-block relative">
+            关于我
+            <span class="absolute bottom-0 left-0 w-24 h-1 bg-primary"></span>
+          </span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-neutral rounded-xl p-6 card-hover">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-user text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">个人信息</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <i class="fa fa-calendar-o text-primary mt-1 mr-2"></i>
+                <span>出生年月：2002.11</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-map-marker text-primary mt-1 mr-2"></i>
+                <span>籍贯：山东日照</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-envelope text-primary mt-1 mr-2"></i>
+                <span>邮箱：1984735439@qq.com</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-envelope text-primary mt-1 mr-2"></i>
+                <span>邮箱：xqf242568@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="bg-neutral rounded-xl p-6 card-hover md:col-span-2">
+            <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-info-circle text-2xl text-secondary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">自我评价</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                <span>热爱运动，多次参加马拉松比赛，如北京半程马拉松、青岛海上马拉松</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                <span>具有自媒体创作经验，小红书、B站获赞上万，具有公众号运营经验</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                <span>深受理工科氛围熏陶，抗压能力强、学习速度快，能够迅速吸取新知识</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                <span>涉猎广泛，知识面广，拥有理学和文学学术背景</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                <span>社会实践和志愿服务经历丰富，积极参与校园、社会活动</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 教育背景 -->
+    <section id="education" class="section-padding bg-neutral">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">
+          <span class="inline-block relative">
+            教育背景
+            <span class="absolute bottom-0 left-0 w-24 h-1 bg-primary"></span>
+          </span>
+        </h2>
+        <div class="max-w-4xl mx-auto">
+          <div class="space-y-8">
+            <!-- 本科 -->
+            <div class="relative pl-12">
+              <div class="timeline-item absolute inset-0"></div>
+              <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                  <div>
+                    <h3 class="text-xl font-semibold text-primary">北京科技大学</h3>
+                    <p class="text-gray-600">化学与生物工程学院 - 生物技术专业</p>
+                  </div>
+                  <span class="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium mt-2 md:mt-0">
+                    2021.09 - 2025.06
+                  </span>
+                </div>
+                <p class="text-gray-700 mb-4">加权平均分: 3.16 / 4.0 (前百分之50)</p>
+                <h4 class="font-medium text-gray-800 mb-2">主修课程</h4>
+                <p class="text-gray-600">C++程序设计、化学原理、工科物理、细胞生物学、基因工程、遗传学</p>
+              </div>
+            </div>
+            
+            <!-- 辅修 -->
+            <div class="relative pl-12">
+              <div class="timeline-item absolute inset-0"></div>
+              <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                  <div>
+                    <h3 class="text-xl font-semibold text-primary">北京科技大学</h3>
+                    <p class="text-gray-600">外国语学院 - 英语辅修</p>
+                  </div>
+                  <span class="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium mt-2 md:mt-0">
+                    2022.09 - 2025.06
+                  </span>
+                </div>
+                <p class="text-gray-700 mb-4">加权平均分: 3.50 / 4.0</p>
+                <h4 class="font-medium text-gray-800 mb-2">主修课程</h4>
+                <p class="text-gray-600">英语口语、英汉对比与翻译、批判思维与学术写作</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 实践经历 -->
+    <section id="experience" class="section-padding bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">
+          <span class="inline-block relative">
+            实践经历
+            <span class="absolute bottom-0 left-0 w-24 h-1 bg-primary"></span>
+          </span>
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <!-- 科研经历 -->
+          <div>
+            <h3 class="text-2xl font-semibold text-primary mb-6 flex items-center">
+              <i class="fa fa-flask mr-3"></i> 科研经历
+            </h3>
+            <div class="space-y-6">
+              <!-- 项目1 -->
+              <div class="bg-neutral p-6 rounded-xl card-hover">
+                <div class="flex justify-between items-start mb-3">
+                  <h4 class="text-lg font-semibold">间充质干细胞治疗帕金森病关键蛋白的筛选及机理研究</h4>
+                  <span class="text-sm text-gray-500">2022.12 - 2023.12</span>
+                </div>
+                <p class="text-gray-700">校级创新创业项目负责人，自主进行文献调研，开展细胞模型构建、转染等实验</p>
+                <p class="text-gray-700 mt-2">康妍葆(北京)干细胞科技有限公司实习，学习动物实验技能，包括养殖、处死小鼠</p>
+              </div>
+              
+              <!-- 项目2 -->
+              <div class="bg-neutral p-6 rounded-xl card-hover">
+                <div class="flex justify-between items-start mb-3">
+                  <h4 class="text-lg font-semibold">海洋芽孢杆菌精氨酸酶基因侧翼序列研究</h4>
+                  <span class="text-sm text-gray-500">2024.03 - 2024.06</span>
+                </div>
+                <p class="text-gray-700">独立开展引物设计、微生物培养、基因组提取、PCR等实验操作</p>
+              </div>
+              
+              <!-- 项目3 -->
+              <div class="bg-neutral p-6 rounded-xl card-hover">
+                <div class="flex justify-between items-start mb-3">
+                  <h4 class="text-lg font-semibold">北京市疾病预防控制中心 职业卫生所</h4>
+                  <span class="text-sm text-gray-500">2024.07 - 2024.08</span>
+                </div>
+                <p class="text-gray-700">学习职业卫生监测知识和技能，整理GBZ、OSHA、NIOSH分析标准</p>
+                <p class="text-gray-700 mt-2">利用ICS2100和ICS-5000离子色谱仪以及相应软件处理气体样品</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 校园经历 -->
+          <div>
+            <h3 class="text-2xl font-semibold text-primary mb-6 flex items-center">
+              <i class="fa fa-university mr-3"></i> 校园经历
+            </h3>
+            <div class="space-y-6">
+              <!-- 经历1 -->
+              <div class="bg-neutral p-6 rounded-xl card-hover">
+                <div class="flex justify-between items-start mb-3">
+                  <h4 class="text-lg font-semibold">北京科技大学学生职业发展协会</h4>
+                  <span class="text-sm text-gray-500">2022.03 - 2023.09</span>
+                </div>
+                <p class="text-gray-700">宣传部干事，负责公众号推文制作、易拉宝等活动物料设计</p>
+                <p class="text-gray-700 mt-2">组织并参与多项职业发展相关活动</p>
+              </div>
+              
+              <!-- 经历2 -->
+              <div class="bg-neutral p-6 rounded-xl card-hover">
+                <div class="flex justify-between items-start mb-3">
+                  <h4 class="text-lg font-semibold">北京科技大学“翱翔之翼”大学生科技志愿服务</h4>
+                  <span class="text-sm text-gray-500">2022.11 - 2024.06</span>
+                </div>
+                <p class="text-gray-700">策划、组织并参与多项志愿服务活动，包括大中小学校园宣讲、公共场所服务</p>
+                <p class="text-gray-700 mt-2">作为元老积极推进志愿服务活动持久发展，多次参加答辩活动并获奖</p>
+              </div>
+              
+              <!-- 经历3 -->
+              <div class="bg-neutral p-6 rounded-xl card-hover">
+                <div class="flex justify-between items-start mb-3">
+                  <h4 class="text-lg font-semibold">班级团支部书记</h4>
+                  <span class="text-sm text-gray-500">2024.09 - 2025.06</span>
+                </div>
+                <p class="text-gray-700">负责班级团支部日常工作，组织团员活动，促进班级凝聚力</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 社会实践 -->
+        <div>
+          <h3 class="text-2xl font-semibold text-primary mb-6 flex items-center">
+            <i class="fa fa-briefcase mr-3"></i> 社会实践
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-neutral p-6 rounded-xl card-hover">
+              <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
+                <i class="fa fa-users text-xl text-accent"></i>
+              </div>
+              <h4 class="text-lg font-semibold mb-2">自媒体创作</h4>
+              <p class="text-gray-700">小红书、B站内容创作者，累计获赞上万，具备新媒体运营经验</p>
+            </div>
+            
+            <div class="bg-neutral p-6 rounded-xl card-hover">
+              <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
+                <i class="fa fa-flag mr-1 text-xl text-accent"></i>
+              </div>
+              <h4 class="text-lg font-semibold mb-2">志愿服务</h4>
+              <p class="text-gray-700">积极参与各类志愿服务活动，累计服务时长超过200小时</p>
+            </div>
+            
+            <div class="bg-neutral p-6 rounded-xl card-hover">
+              <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
+                <i class="fa fa-heartbeat text-xl text-accent"></i>
+              </div>
+              <h4 class="text-lg font-semibold mb-2">马拉松运动</h4>
+              <p class="text-gray-700">多次参加马拉松比赛，包括北京半程马拉松、青岛海上马拉松等</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 个人技能 -->
+    <section id="skills" class="section-padding bg-neutral">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">
+          <span class="inline-block relative">
+            个人技能
+            <span class="absolute bottom-0 left-0 w-24 h-1 bg-primary"></span>
+          </span>
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- 实验技能 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <i class="fa fa-flask text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-4">实验技能</h3>
+            <div class="space-y-2">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">遗传学实验</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">分子生物学实验</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">细胞生物学实验</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">生物化学实验</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">有机化学实验</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-primary h-2 rounded-full" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 语言技能 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+            <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <i class="fa fa-language text-2xl text-secondary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-4">语言技能</h3>
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mr-4">
+                  <i class="fa fa-check text-secondary"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">英语</h4>
+                  <p class="text-sm text-gray-600">CET-4、CET-6，辅修英语专业，具备良好的听说读写能力</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mr-4">
+                  <i class="fa fa-comment text-secondary"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">英语口语</h4>
+                  <p class="text-sm text-gray-600">能够进行日常交流和学术讨论，参加过英语口语竞赛</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mr-4">
+                  <i class="fa fa-file-text-o text-secondary"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">英汉翻译</h4>
+                  <p class="text-sm text-gray-600">学习过英汉对比与翻译课程，具备专业文献翻译能力</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 软件技能 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <i class="fa fa-laptop text-2xl text-accent"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-4">软件技能</h3>
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <i class="fa fa-check text-accent mr-2"></i>
+                <span>熟练使用Word、PPT、WPS等办公软件</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fa fa-check text-accent mr-2"></i>
+                <span>精通MacOS操作系统，熟悉Windows系统</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fa fa-check text-accent mr-2"></i>
+                <span>能够使用ChatGPT、Kimi等人工智能软件辅助工作</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fa fa-check text-accent mr-2"></i>
+                <span>掌握C++程序设计基础，能够编写简单程序</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fa fa-check text-accent mr-2"></i>
+                <span>熟悉常用生物信息学软件和数据分析工具</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 获奖经历 -->
+    <section id="awards" class="section-padding bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">
+          <span class="inline-block relative">
+            获奖经历
+            <span class="absolute bottom-0 left-0 w-24 h-1 bg-primary"></span>
+          </span>
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- 奖项1 -->
+          <div class="bg-neutral p-6 rounded-xl card-hover flex flex-col items-center text-center">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-trophy text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">山东省普通高中省级优秀学生</h3>
+            <p class="text-gray-600 text-sm">省级荣誉，高中阶段</p>
+          </div>
+          
+          <!-- 奖项2 -->
+          <div class="bg-neutral p-6 rounded-xl card-hover flex flex-col items-center text-center">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-trophy text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">北京科技大学首届志愿服务大赛金奖</h3>
+            <p class="text-gray-600 text-sm">校级比赛，2023年</p>
+          </div>
+          
+          <!-- 奖项3 -->
+          <div class="bg-neutral p-6 rounded-xl card-hover flex flex-col items-center text-center">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-trophy text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">第十届北京市大学生生物学知识竞赛二等奖</h3>
+            <p class="text-gray-600 text-sm">市级比赛，2024年</p>
+          </div>
+          
+          <!-- 奖项4 -->
+          <div class="bg-neutral p-6 rounded-xl card-hover flex flex-col items-center text-center">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-trophy text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">北京科技大学“优秀共青团员”</h3>
+            <p class="text-gray-600 text-sm">校级荣誉，2024年</p>
+          </div>
+          
+          <!-- 奖项5 -->
+          <div class="bg-neutral p-6 rounded-xl card-hover flex flex-col items-center text-center">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-trophy text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">"青创北京"2024年"挑战杯"首都大学生创业计划竞赛银奖</h3>
+            <p class="text-gray-600 text-sm">市级比赛，"青燃希望"专项赛</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="bg-dark text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <h3 class="text-2xl font-bold mb-2">辛全丰</h3>
+          <p class="text-gray-400">北京科技大学生物技术专业本科生</p>
+        </div>
+        
+        <div class="flex space-x-6">
+          <a href="tel:18769358575" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fa fa-phone fa-lg"></i>
+          </a>
+          <a href="mailto:1984735439@qq.com" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fa fa-envelope fa-lg"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fa fa-linkedin fa-lg"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fa fa-github fa-lg"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
+        <p>© 2025 辛全丰. 保留所有权利.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 导航栏滚动效果
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('py-2', 'shadow-md');
+        navbar.classList.remove('py-3', 'shadow-sm');
+      } else {
+        navbar.classList.add('py-3', 'shadow-sm');
+        navbar.classList.remove('py-2', 'shadow-md');
+      }
+    });
+    
+    // 移动端菜单切换
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        // 关闭移动端菜单
+        document.getElementById('mobile-menu').classList.add('hidden');
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
