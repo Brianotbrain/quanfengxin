@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>华源不锈钢 - 山东省日照市专业不锈钢加工企业</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E40AF', // 专业蓝色系
+            secondary: '#0EA5E9',
+            accent: '#10B981',
+            neutral: '#F8FAFC',
+            dark: '#1F2937'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .card-hover {
+        @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+      }
+      .section-padding {
+        @apply py-12 md:py-16;
+      }
+    }
+  </style>
+</head>
+<body class="bg-neutral text-dark font-sans">
+  <!-- 导航栏 -->
+  <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300" id="navbar">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-primary">华源不锈钢</a>
+      <div class="hidden md:flex space-x-8">
+        <a href="#about" class="font-medium hover:text-primary transition-colors">公司简介</a>
+        <a href="#services" class="font-medium hover:text-primary transition-colors">业务范围</a>
+        <a href="#products" class="font-medium hover:text-primary transition-colors">产品展示</a>
+        <a href="#team" class="font-medium hover:text-primary transition-colors">团队介绍</a>
+        <a href="#contact" class="font-medium hover:text-primary transition-colors">联系我们</a>
+      </div>
+      <button class="md:hidden text-dark" id="menu-toggle">
+        <i class="fa fa-bars text-2xl"></i>
+      </button>
+    </div>
+    <!-- 移动端菜单 -->
+    <div class="md:hidden hidden bg-white shadow-lg absolute w-full" id="mobile-menu">
+      <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+        <a href="#about" class="font-medium py-2 hover:text-primary transition-colors">公司简介</a>
+        <a href="#services" class="font-medium py-2 hover:text-primary transition-colors">业务范围</a>
+        <a href="#products" class="font-medium py-2 hover:text-primary transition-colors">产品展示</a>
+        <a href="#team" class="font-medium py-2 hover:text-primary transition-colors">团队介绍</a>
+        <a href="#contact" class="font-medium py-2 hover:text-primary transition-colors">联系我们</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 英雄区域 -->
+  <header class="pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-br from-primary/5 to-secondary/5">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-dark leading-tight text-shadow">
+          华源不锈钢 <span class="text-primary">品质铸就未来</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 mt-4 max-w-lg">
+          山东省日照市专业不锈钢加工企业，专注不锈钢制品定制与工程服务，为客户提供一站式解决方案
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="tel:15163378944" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition-all flex items-center">
+            <i class="fa fa-phone mr-2"></i> 15163378944（张经理）
+          </a>
+          <a href="tel:13963316587" class="bg-white hover:bg-gray-50 text-primary border border-primary px-6 py-3 rounded-lg font-medium transition-all flex items-center">
+            <i class="fa fa-phone mr-2"></i> 13963316587（辛经理）
+          </a>
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+          <img src="https://picsum.photos/800/800?random=101" alt="华源不锈钢" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 公司简介 -->
+    <section id="about" class="section-padding bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">
+          <span class="inline-block relative">
+            公司简介
+            <span class="absolute bottom-0 left-0 w-24 h-1 bg-primary"></span>
+          </span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-neutral rounded-xl p-6 card-hover">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-building text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">企业概况</h3>
+            <p class="text-gray-700">
+              山东省日照市华源不锈钢成立于2010年，是一家专注于不锈钢材料销售、加工及工程服务的小微企业，拥有10余年行业经验。
+            </p>
+            <p class="text-gray-700 mt-2">
+              公司位于日照市江豪建材市场，占地面积200平方米，配备专业加工设备，由张梅梅、辛华两位经理全程负责从设计到安装的一站式服务。
+            </p>
+          </div>
+          
+          <div class="bg-neutral rounded-xl p-6 card-hover md:col-span-2">
+            <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-certificate text-2xl text-secondary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">企业理念</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                <span><strong>品质第一：</strong>严格把控材料与加工工艺，确保每一件产品符合行业标准</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                <span><strong>客户至上：</strong>以客户需求为核心，提供个性化定制方案与贴心售后服务</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                <span><strong>创新发展：</strong>持续引进新技术、新设备，提升加工精度与生产效率</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                <span><strong>诚信经营：</strong>10余年行业口碑，诚信为本，与客户建立长期合作关系</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="mt-12 bg-neutral rounded-xl p-6 md:p-8">
+          <h3 class="text-2xl font-semibold text-center mb-6 text-primary">企业资质与荣誉</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
+            <div class="text-center">
+              <div class="w-20 h-20 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-2">
+                <i class="fa fa-calendar text-2xl text-primary"></i>
+              </div>
+              <p class="text-sm font-medium">10+<br>年行业经验</p>
+            </div>
+            <div class="text-center">
+              <div class="w-20 h-20 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-2">
+                <i class="fa fa-users text-2xl text-primary"></i>
+              </div>
+              <p class="text-sm font-medium">2人<br>核心团队</p>
+            </div>
+            <div class="text-center">
+              <div class="w-20 h-20 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-2">
+                <i class="fa fa-cogs text-2xl text-primary"></i>
+              </div>
+              <p class="text-sm font-medium">10+<br>加工设备</p>
+            </div>
+            <div class="text-center">
+              <div class="w-20 h-20 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-2">
+                <i class="fa fa-map-marker text-2xl text-primary"></i>
+              </div>
+              <p class="text-sm font-medium">200㎡<br>厂房面积</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 业务范围 -->
+    <section id="services" class="section-padding bg-neutral">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">
+          <span class="inline-block relative">
+            业务范围
+            <span class="absolute bottom-0 left-0 w-24 h-1 bg-primary"></span>
+          </span>
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- 业务1 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-cut text-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">不锈钢材料销售</h3>
+            <p class="text-gray-700">
+              主营304、316L、201等各型号不锈钢板材、管材、型材，与国内知名钢厂合作，确保材料品质。
+            </p>
+          </div>
+          
+          <!-- 业务2 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-cogs text-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">不锈钢加工服务</h3>
+            <p class="text-gray-700">
+              提供激光切割、折弯、焊接、抛光、表面处理等一站式加工服务，支持来图来样定制。
+            </p>
+          </div>
+          
+          <!-- 业务3 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-building-o text-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">不锈钢工程安装</h3>
+            <p class="text-gray-700">
+              承接不锈钢扶手、护栏、门窗、屏风、广告牌、厨房设备等工程的设计与安装。
+            </p>
+          </div>
+          
+          <!-- 业务4 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-home text-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">家居装饰制品</h3>
+            <p class="text-gray-700">
+              定制不锈钢茶几、花架、酒架、装饰摆件等家居用品，兼具实用性与美观性。
+            </p>
+          </div>
+          
+          <!-- 业务5 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-industry text-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">工业设备配件</h3>
+            <p class="text-gray-700">
+              生产不锈钢储罐、管道配件、机械零件等工业设备配套产品，符合工业标准。
+            </p>
+          </div>
+          
+          <!-- 业务6 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-truck text-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">配送与售后</h3>
+            <p class="text-gray-700">
+              提供本地配送服务，支持全国物流发货，专业售后团队解决安装与使用问题。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 产品展示 -->
+    <section id="products" class="section-padding bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">
+          <span class="inline-block relative">
+            产品展示
+            <span class="absolute bottom-0 left-0 w-24 h-1 bg-primary"></span>
+          </span>
+        </h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- 产品1 -->
+          <div class="group relative overflow-hidden rounded-xl card-hover">
+            <img src="https://picsum.photos/600/400?random=201" alt="不锈钢扶手" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+              <h3 class="text-xl font-semibold text-white">不锈钢扶手护栏</h3>
+              <p class="text-gray-200 text-sm mt-1">适用于楼梯、阳台、商场等场景，可定制不同造型与规格</p>
+            </div>
+          </div>
+          
+          <!-- 产品2 -->
+          <div class="group relative overflow-hidden rounded-xl card-hover">
+            <img src="https://picsum.photos/600/400?random=202" alt="不锈钢屏风" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+              <h3 class="text-xl font-semibold text-white">不锈钢装饰屏风</h3>
+              <p class="text-gray-200 text-sm mt-1">激光切割花纹，适用于酒店、办公室、家居等空间隔断</p>
+            </div>
+          </div>
+          
+          <!-- 产品3 -->
+          <div class="group relative overflow-hidden rounded-xl card-hover">
+            <img src="https://picsum.photos/600/400?random=203" alt="不锈钢厨房设备" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+              <h3 class="text-xl font-semibold text-white">不锈钢厨房设备</h3>
+              <p class="text-gray-200 text-sm mt-1">操作台、储物柜、水槽等，耐腐蚀易清洁，符合食品卫生标准</p>
+            </div>
+          </div>
+          
+          <!-- 产品4 -->
+          <div class="group relative overflow-hidden rounded-xl card-hover">
+            <img src="https://picsum.photos/600/400?random=204" alt="不锈钢管材" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+              <h3 class="text-xl font-semibold text-white">不锈钢管材</h3>
+              <p class="text-gray-200 text-sm mt-1">圆管、方管、矩形管等，多种规格材质，支持切割定制</p>
+            </div>
+          </div>
+          
+          <!-- 产品5 -->
+          <div class="group relative overflow-hidden rounded-xl card-hover">
+            <img src="https://picsum.photos/600/400?random=205" alt="不锈钢板材" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+              <h3 class="text-xl font-semibold text-white">不锈钢板材</h3>
+              <p class="text-gray-200 text-sm mt-1">304/316L等材质，冷轧热轧板材，表面可做镜面、拉丝等处理</p>
+            </div>
+          </div>
+          
+          <!-- 产品6 -->
+          <div class="group relative overflow-hidden rounded-xl card-hover">
+            <img src="https://picsum.photos/600/400?random=206" alt="不锈钢工艺品" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+              <h3 class="text-xl font-semibold text-white">不锈钢工艺品</h3>
+              <p class="text-gray-200 text-sm mt-1">定制不锈钢雕塑、摆件、花架等，创意设计，工艺精美</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-10">
+          <a href="tel:15163378944" class="inline-block bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-medium transition-all">
+            <i class="fa fa-shopping-cart mr-2"></i> 咨询定制产品
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 团队介绍 -->
+    <section id="team" class="section-padding bg-neutral">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">
+          <span class="inline-block relative">
+            核心团队
+            <span class="absolute bottom-0 left-0 w-24 h-1 bg-primary"></span>
+          </span>
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- 张经理 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm card-hover flex flex-col md:flex-row items-center">
+            <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mr-6 mb-4 md:mb-0">
+              <img src="https://picsum.photos/200/200?random=301" alt="张经理" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold">张经理</h3>
+              <p class="text-primary font-medium mb-2">总经理 / 设计师</p>
+              <p class="text-gray-700 mb-4">
+                10年不锈钢行业经验，负责客户沟通、方案设计与售后服务，擅长根据客户需求提供定制化解决方案。
+              </p>
+              <a href="tel:15163378944" class="text-primary font-medium flex items-center">
+                <i class="fa fa-phone mr-2"></i> 15163378944（张经理）
+              </a>
+            </div>
+          </div>
+          
+          <!-- 辛经理 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm card-hover flex flex-col md:flex-row items-center">
+            <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mr-6 mb-4 md:mb-0">
+              <img src="https://picsum.photos/200/200?random=302" alt="辛经理" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold">辛经理</h3>
+              <p class="text-primary font-medium mb-2">技术总监 / 工程师</p>
+              <p class="text-gray-700 mb-4">
+                12年不锈钢加工经验，精通激光切割、焊接、安装等全流程工艺，负责技术执行与质量把控。
+              </p>
+              <a href="tel:13963316587" class="text-primary font-medium flex items-center">
+                <i class="fa fa-phone mr-2"></i> 13963316587（辛经理）
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-12 text-center">
+          <p class="text-gray-600 mb-6">
+            我们是一支精简高效的团队，两人分工明确，从方案设计到加工安装全程跟进，确保为客户提供一站式服务。
+          </p>
+          <a href="#contact" class="inline-block bg-white hover:bg-gray-50 text-primary border border-primary px-8 py-3 rounded-lg font-medium transition-all">
+            <i class="fa fa-users mr-2"></i> 联系我们获取方案
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="section-padding bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">
+          <span class="inline-block relative">
+            联系我们
+            <span class="absolute bottom-0 left-0 w-24 h-1 bg-primary"></span>
+          </span>
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-2xl font-semibold mb-6 text-primary">获取更多信息</h3>
+            <p class="text-gray-700 mb-8">
+              无论您有任何需求或疑问，欢迎通过以下方式联系我们，我们将尽快为您提供专业解答与服务。
+            </p>
+            
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fa fa-map-marker text-xl text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1">公司地址</h4>
+                  <p class="text-gray-700">
+                    <a href="https://map.baidu.com/poi/华源不锈钢加工制作江豪店/@13300429.675,4200464.38,18.85z?uid=3906fbffe01ebdf709f5eb5d&ugc_type=3&ugc_ver=1&device_ratio=2&compat=1&invoketofun=photo&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl" target="_blank" class="text-primary hover:underline">
+                      山东省日照市江豪建材市场华源不锈钢加工制作江豪店
+                    </a>
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fa fa-phone text-xl text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1">联系电话</h4>
+                  <p class="text-gray-700">
+                    <a href="tel:15163378944" class="text-primary font-medium">张经理：15163378944（方案设计/售后）</a><br>
+                    <a href="tel:13963316587" class="text-primary font-medium">辛经理：13963316587（技术加工/安装）</a>
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fa fa-clock-o text-xl text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1">营业时间</h4>
+                  <p class="text-gray-700">周一至周日 8:00 - 18:00（节假日正常营业）</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fa fa-envelope text-xl text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1">电子邮箱</h4>
+                  <p class="text-gray-700">1984735439@qq.com</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 flex space-x-4">
+              <a href="weixin://contacts/profile/15163378944" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                <i class="fa fa-weixin"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                <i class="fa fa-qq"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <div class="bg-neutral rounded-xl p-6 md:p-8 shadow-sm">
+              <h3 class="text-xl font-semibold mb-6 text-center text-primary">发送留言</h3>
+              <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">姓名</label>
+                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="请输入您的姓名">
+                  </div>
+                  <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">电话</label>
+                    <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="请输入您的联系电话">
+                  </div>
+                </div>
+                
+                <div class="mb-6">
+                  <label for="email" class="block text-sm font-medium text-gray-700 mb-2">邮箱</label>
+                  <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="请输入您的邮箱">
+                </div>
+                
+                <div class="mb-6">
+                  <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">留言主题</label>
+                  <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="请输入留言主题">
+                </div>
+                
+                <div class="mb-6">
+                  <label for="message" class="block text-sm font-medium text-gray-700 mb-2">留言内容</label>
+                  <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="请输入您的留言内容"></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition-all">
+                  <i class="fa fa-paper-plane mr-2"></i> 发送留言
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 地图位置 -->
+    <section class="py-0">
+      <div class="h-[500px] w-full bg-gray-200">
+        <!-- 百度地图嵌入 -->
+        <iframe 
+          src="https://map.baidu.com/poi/华源不锈钢加工制作江豪店/@13300429.675,4200464.38,18.85z?uid=3906fbffe01ebdf709f5eb5d&ugc_type=3&ugc_ver=1&device_ratio=2&compat=1&invoketofun=photo&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl"
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="bg-dark text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">华源不锈钢</h3>
+          <p class="text-gray-400 mb-4">
+            山东省日照市专业不锈钢加工企业，专注不锈钢制品定制与工程服务，为客户提供一站式解决方案。
+          </p>
+          <div class="flex space-x-4">
+            <a href="weixin://contacts/profile/15163378944" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fa fa-weixin text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fa fa-qq text-xl"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-semibold mb-4">快速链接</h3>
+          <ul class="space-y-2">
+            <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">公司简介</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">业务范围</a></li>
+            <li><a href="#products" class="text-gray-400 hover:text-white transition-colors">产品展示</a></li>
+            <li><a href="#team" class="text-gray-400 hover:text-white transition-colors">团队介绍</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">联系我们</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-semibold mb-4">联系我们</h3>
